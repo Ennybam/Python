@@ -1,0 +1,32 @@
+#Step 1: Display welcome message
+print("Welcome to python pizza Delivaries!")
+
+#step 2: Get user inputs 
+size = input("What size of pizza do you want? S, M, or L:").upper()
+add_pepperoni=input("Do you want pepperoni? Y or N:").upper()
+extra_cheese=input("Do you want extra cheese? Y or N:").upper()
+
+#Step 3: Initialize the bill 
+bill = 0
+
+#Step 4: Add the cost of the pizza based on size
+if size == "S":
+    bill = 15
+elif size == "M":
+    bill = 20
+elif size == "L":
+    bill = 25
+
+# Step 5: Add cost of pepperoni
+if add_pepperoni == "Y":
+    if size == "S":
+        bill += 2
+else:
+    bill += 3
+
+#Step 6: Add cost of extra cheese
+if extra_cheese == "Y":
+    bill += 1
+
+# Step 7: Output the final bill
+print("Your final bill is: ${bill}.")
